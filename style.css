@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    color: #003366; /* Azul escuro */
+    text-align: center;
+}
+
+header h2 {
+    color: #003366; /* Azul escuro */
+    text-align: center;
+}
+
+.section-title {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.section-title h3 {
+    color: #003366; /* Azul escuro */
+    margin: 0;
+}
+
+.contact-section, .education-section, .courses-section {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.experience-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Exibe dois cartões por linha */
+    gap: 20px;
+}
+
+.contact-card, .education-card, .experience-card, .courses-card {
+    background-color: #e6e6e6;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 250px;
+    box-sizing: border-box;
+}
+
+.contact-card a, .education-card a, .courses-card a {
+    color: #003366; /* Azul escuro */
+    text-decoration: none;
+}
+
+.contact-card a:hover, .education-card a:hover, .courses-card a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #003366; /* Azul escuro */
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .contact-section, .education-section, .courses-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-card, .education-card, .experience-card, .courses-card {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .experience-section {
+        grid-template-columns: 1fr; /* Exibe um cartão por linha em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 24px;
+    }
+
+    header h2 {
+        font-size: 18px;
+    }
+
+    .contact-card, .education-card, .experience-card, .courses-card {
+        padding: 15px;
+    }
+}
